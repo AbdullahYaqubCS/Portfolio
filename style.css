@@ -132,6 +132,23 @@ body {
 }
 
 
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+  }
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
 
   .hamburger {
@@ -157,6 +174,7 @@ body {
     border-radius: 20px;
     z-index: 1;
     transform: translateX(-100%);
+    margin-right: 20px;
     transition: transform 0.3s ease, opacity 0.3s ease;
      /* Ensure the menu is above other content */
   }
@@ -193,6 +211,21 @@ body {
 
   .hamburger.active .bar:nth-child(4) {
     transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: row; /* Stack icons horizontally */
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column; /* Stack icons vertically on smaller screens */
   }
 }
 
